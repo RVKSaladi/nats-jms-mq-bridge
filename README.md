@@ -425,6 +425,20 @@ $ bin/admin.sh clear-error
 
 ```
 
+You can also just curl the KPI end point.
+
+## Curl KPI end point
+```bash
+
+curl -s -k "$NATS_ADMIN_HOST/manage/prometheus"
+
+```
+
+This will show the KPIs for the Bridge Admin in [Prometheus format](https://prometheus.io/docs/concepts/data_model/).
+All standard monitoring tools like DataDog, Splunk, APMs, InfluxDB, etc. have ways to ingest Prometheus data.
+
+
+
 ## To import a TSV file
 
 ```sh
